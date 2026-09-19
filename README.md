@@ -1,0 +1,1 @@
+Página actualizada para utilizar directamente la imagen photo-1506126613408-eca07ce68773.avif.

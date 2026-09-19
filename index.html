@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes Llorente | Meditación en la Vida Diaria</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fbf9f5',
+                            100: '#f5efdf',
+                            200: '#eadebe',
+                            300: '#dec799',
+                            400: '#d1ae71',
+                            500: '#c59451',
+                            600: '#b07941',
+                            700: '#8e5b38',
+                            800: '#734933',
+                            900: '#5e3d2d',
+                            accent: '#e66023',
+                            navy: '#1b233a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-50 text-stone-800 font-sans antialiased selection:bg-brand-200">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-amber-900/10 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-amber-200 transition-transform group-hover:scale-105">
+                    <i data-lucide="flower2" class="w-5 h-5"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg font-bold tracking-tight text-brand-navy leading-none">Mercedes Llorente</span>
+                    <span class="text-xs text-stone-500 font-light tracking-wider uppercase mt-0.5">Guía de Meditación</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-600">
+                <a href="#beneficios" class="hover:text-brand-accent transition-colors">Beneficios</a>
+                <a href="#sobre-mi" class="hover:text-brand-accent transition-colors">Sobre Mí</a>
+                <a href="#talleres" class="hover:text-brand-accent transition-colors">Talleres Presenciales</a>
+                <a href="#opiniones" class="hover:text-brand-accent transition-colors">Opiniones</a>
+                <a href="#tarifas" class="hover:text-brand-accent transition-colors">Sesiones</a>
+                <a href="#faq" class="hover:text-brand-accent transition-colors">Preguntas</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#tarifas" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy text-amber-50 hover:bg-stone-800 text-sm font-semibold transition-all shadow-sm hover:shadow">
+                    <span>Reservar Cita</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menuBtn" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-50 border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beneficios" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Beneficios</a>
+            <a href="#sobre-mi" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Sobre Mí</a>
+            <a href="#talleres" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Talleres Presenciales</a>
+            <a href="#opiniones" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Opiniones de Alumnos</a>
+            <a href="#tarifas" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Sesiones y Reservas</a>
+            <a href="#faq" class="block py-2 text-stone-700 hover:text-brand-accent font-medium">Preguntas Frecuentes</a>
+            <a href="#tarifas" class="block w-full text-center py-3 rounded-full bg-brand-navy text-amber-50 font-semibold mt-4">
+                Reservar Cita
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-amber-100/40 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/60 text-brand-700 text-xs font-medium uppercase tracking-wider">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>Anytime, Anywhere Meditation</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-navy leading-tight">
+                        Descubre la paz interior en tu vida diaria
+                    </h1>
+                    <p class="text-lg sm:text-xl text-stone-600 font-light leading-relaxed max-w-2xl">
+                        Aprende a transformar tu mente, gestionar el estrés y cultivar calma y presencia dondequiera que estés. Sin complicaciones, accesible para todos.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="#talleres" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-accent hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-900/10 hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                            <span>Próximo Taller Presencial</span>
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#tarifas" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white hover:bg-stone-50 border border-stone-200 text-stone-800 font-semibold shadow-sm transition-all flex items-center justify-center gap-2">
+                            <span>Reservar Sesión</span>
+                        </a>
+                    </div>
+                    <div class="pt-6 flex items-center justify-center md:justify-start gap-6 text-sm text-stone-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Todos los niveles</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Presencial y Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl bg-amber-100/50 p-3 border border-amber-200/50">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden relative bg-stone-200">
+                            <!-- Uso explícito de la imagen photo-1506126613408-eca07ce68773 -->
+                            <img src="img/photo-1506126613408-eca07ce68773.avif" alt="Meditación y Calma" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800';">
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl border border-stone-100 hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+                                <i data-lucide="heart" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-500">Enfoque cercano</p>
+                                <p class="text-sm font-bold text-stone-800">Práctica accesible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="py-20 bg-white border-y border-stone-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand-600">¿Por qué meditar?</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">Una herramienta real para la vida cotidiana</p>
+                <p class="text-stone-600">Meditar no es dejar la mente en blanco, sino aprender a relacionarte de manera saludable con tus pensamientos y emociones.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-50/60 p-8 rounded-2xl border border-stone-200/80 hover:border-brand-300 transition-all hover:shadow-lg space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-stone-900">Calma la Mente</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Aprende a gestionar el estrés, la sobrecarga mental y la ansiedad provocados por el ritmo acelerado de la vida moderna.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-50/60 p-8 rounded-2xl border border-stone-200/80 hover:border-brand-300 transition-all hover:shadow-lg space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="sun" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-stone-900">Presencia en Cualquier Lugar</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Desarrolla la capacidad de estar presente ("Anytime, Anywhere") integrando pequeñas pausas de atención consciente en tu día.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-50/60 p-8 rounded-2xl border border-stone-200/80 hover:border-brand-300 transition-all hover:shadow-lg space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-stone-900">Bienestar Emocional</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Cultiva una actitud de amabilidad, paciencia y ecuanimidad hacia ti mismo y en tus relaciones personales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mercedes Section -->
+    <section id="sobre-mi" class="py-20 bg-brand-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 order-2 md:order-1">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-amber-200/60">
+                        <img src="img/Mllorente.jpeg" alt="Meditación y Calma" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800';">
+                    </div>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2 space-y-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-brand-600">Conoce a tu guía</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">Hola, soy Mercedes Llorente</h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        Mi propósito es acompañarte a integrar la meditación de forma práctica, natural y comprensible en tu cotidianidad.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed">
+                        Inspirada en tradiciones y métodos de meditación reconocidos internacionalmente, oriento mis sesiones hacia la exploración directa de la mente y la experiencia, ayudándote a descubrir tus propios recursos internos de calma y sabiduría.
+                    </p>
+                    <div class="pt-2">
+                        <blockquote class="p-4 bg-amber-100/60 border-l-4 border-brand-500 rounded-r-lg italic text-stone-700 text-sm">
+                            "La meditación no se trata de cambiar quién eres, sino de descubrir la paz que ya reside en ti."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Taller Destacado Section -->
+    <section id="talleres" class="py-20 bg-stone-900 text-stone-100 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-stone-800/80 rounded-3xl p-8 sm:p-12 border border-stone-700/80 backdrop-blur">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Próximo Taller Presencial</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Introducción a la Meditación</h2>
+                        <p class="text-stone-300 leading-relaxed">
+                            Una sesión especial al aire libre en contacto con la naturaleza. Aprenderás las bases de la práctica meditativa en un ambiente tranquilo y comunitario.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm text-stone-300 pt-2">
+                            <div class="flex items-center gap-3 bg-stone-900/60 p-3.5 rounded-xl border border-stone-700/50">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-white">Parque de la Salud</p>
+                                    <p class="text-xs text-stone-400">Pozuelo de Alarcón</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-stone-900/60 p-3.5 rounded-xl border border-stone-700/50">
+                                <i data-lucide="clock" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-white">12:00 h (1h 30m)</p>
+                                    <p class="text-xs text-stone-400">Duración estimada</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap gap-4 items-center">
+                            <button onclick="openBookingModal('Taller Presencial en el Parque de la Salud', 'Gratuito / Aportación libre')" class="px-8 py-3.5 rounded-full bg-brand-accent hover:bg-orange-600 text-white font-semibold shadow-lg transition-all flex items-center gap-2">
+                                <span>Reservar Plaza Gratis</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                            <span class="text-xs text-stone-400">Plazas limitadas por aforo.</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5"> <!-- O la columna que decidas usar -->
+                       <!-- Quitamos 'aspect-video lg:aspect-square' para que la altura sea libre -->
+                        <div class="rounded-2xl overflow-hidden border border-stone-700 shadow-xl bg-stone-900 relative">
+                        <!-- Cambiamos 'object-cover' por 'object-contain' y 'h-full' por 'h-auto' -->
+                        <img src="img/intromeditacion.jpeg" alt="Parque de la Salud Pozuelo" class="w-full h-auto object-contain" onerror="this.onerror=null; this.src='https://unsplash.com';">
+        
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                        <span class="text-xs text-stone-300 italic">Guiado por Mercedes Llorente</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opinions / Testimonials Section -->
+    <section id="opiniones" class="py-20 bg-amber-50/50 border-y border-stone-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand-600">Experiencias y Testimonios</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">Lo que dicen los asistentes</p>
+                <p class="text-stone-600">Alumnos y vecinos de Pozuelo comparten sus vivencias en las sesiones y talleres de meditación con Mercedes.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-stone-600 text-sm leading-relaxed italic">
+                            "Asistí al taller del Parque de la Salud en Pozuelo sin saber muy bien qué esperar. Mercedes explica la meditación de una forma súper cercana y práctica. Conseguí conectar y desconectar del estrés del trabajo."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-200 text-brand-800 font-bold flex items-center justify-center text-sm">
+                            CG
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900">Cesar S.V.</p>
+                            <p class="text-xs text-stone-500">Asistente al Taller en el Parque</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-stone-600 text-sm leading-relaxed italic">
+                            "Las sesiones individuales con Mercedes me han dado herramientas reales para calmar la mente durante mi jornada diaria. Su voz y su paz contagian desde el primer momento."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-navy text-amber-200 font-bold flex items-center justify-center text-sm">
+                            JM
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900">Javier M.</p>
+                            <p class="text-xs text-stone-500">Alumno de Sesiones Privadas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-stone-600 text-sm leading-relaxed italic">
+                            "Siempre pensé que meditar no era para mí porque no puedo parar mis pensamientos. Mercedes me enseñó que no se trata de parar la mente sino de mirarla con amabilidad. ¡Totalmente recomendable!"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-200 text-brand-800 font-bold flex items-center justify-center text-sm">
+                            LR
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900">Lucía R.</p>
+                            <p class="text-xs text-stone-500">Vecina de Pozuelo de Alarcón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifas y Reservas Section -->
+    <section id="tarifas" class="py-20 bg-brand-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand-600">Modalidades y Precios</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">Elige la forma de practicar</p>
+                <p class="text-stone-600">Reserva tu cita de forma sencilla. Puedes pagar con tarjeta de manera 100% segura mediante Stripe o apuntarte gratis a los encuentros grupales.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Option 1: Gratis -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-stone-100 text-stone-700 text-xs font-semibold uppercase tracking-wider">
+                            Grupal / Presencial
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-stone-900">Encuentros y Talleres Abiertos</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-bold text-stone-900">Gratuito</span>
+                            <span class="text-stone-500 text-sm">/ Aportación consciente</span>
+                        </div>
+                        <p class="text-stone-600 text-sm">
+                            Sesiones periódicas en grupo en espacios como el Parque de la Salud en Pozuelo para practicar juntos al aire libre.
+                        </p>
+                        <ul class="space-y-3 text-sm text-stone-600 pt-2">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Práctica guiada en grupo</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Ronda de preguntas y respuestas</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Materiales y pautas para casa</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('Taller Abierto Grupal', 'Gratis')" class="w-full py-3.5 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold transition-all">
+                        Reservar Plaza Gratis
+                    </button>
+                </div>
+
+                <!-- Option 2: Individual / Pago Stripe -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-brand-500 shadow-xl relative flex flex-col justify-between space-y-6">
+                    <div class="absolute -top-3.5 right-8 bg-brand-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Recomendado
+                    </div>
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">
+                            Individual / Personalizado
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-stone-900">Sesión Individual de Meditación</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-bold text-stone-900">50 €</span>
+                            <span class="text-stone-500 text-sm">/ sesión (60 min)</span>
+                        </div>
+                        <p class="text-stone-600 text-sm">
+                            Acompañamiento personalizado diseñado a tu medida, enfocado en tus necesidades específicas de gestión del estrés o atención.
+                        </p>
+                        <ul class="space-y-3 text-sm text-stone-600 pt-2">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Sesión privada 1 a 1 (Online o Presencial)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Estrategia adaptada a tu ritmo diario</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Grabación y ejercicios recomendados</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('Sesión Individual 1h', '50 €')" class="w-full py-3.5 rounded-full bg-brand-navy hover:bg-stone-800 text-white font-semibold transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="credit-card" class="w-4 h-4"></i>
+                        <span>Reservar y Pagar (Stripe)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white border-t border-stone-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand-600">Dudas Frecuentes</h2>
+                <p class="text-3xl font-serif font-bold text-brand-navy">Preguntas Habituales</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center bg-stone-50/50 hover:bg-stone-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>¿Necesito experiencia previa para asistir a las clases?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-stone-600 text-sm leading-relaxed bg-stone-50/50">
+                        No, en absoluto. Todas las sesiones y talleres están adaptados tanto para personas que se inician por primera vez como para quienes ya tienen cierta práctica y desean consolidarla.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center bg-stone-50/50 hover:bg-stone-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>¿Cómo funciona la reserva y el pago?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-stone-600 text-sm leading-relaxed bg-stone-50/50">
+                        Al seleccionar una sesión, accederás a la agenda de reservas. Si se trata de una sesión de pago, el importe se procesa de forma segura a través de **Stripe** mediante tarjeta de crédito o débito antes de confirmar la cita.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center bg-stone-50/50 hover:bg-stone-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>¿Qué debo llevar al taller presencial en el Parque de la Salud?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-stone-600 text-sm leading-relaxed bg-stone-50/50">
+                        Te aconsejamos traer ropa cómoda. Puedes traer un cojín de meditación o una esterilla para sentarte en el césped. Si lo prefieres, también puedes realizar las prácticas sentado en los bancos del parque.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-amber-200">
+                        <i data-lucide="flower2" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-serif font-bold text-white text-lg">Mercedes Llorente</span>
+                </div>
+                <p class="text-xs text-stone-400">
+                    © 2026 Mercedes Llorente. Meditación en Pozuelo de Alarcón.
+                </p>
+                <div class="flex gap-4 text-xs">
+                    <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal Simulation -->
+    <div id="bookingModal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="space-y-2">
+                <span id="modalBadge" class="px-2.5 py-1 rounded-full bg-amber-100 text-brand-800 text-xs font-bold uppercase tracking-wider"></span>
+                <h3 id="modalTitle" class="text-2xl font-serif font-bold text-stone-900"></h3>
+                <p id="modalPrice" class="text-sm text-stone-500"></p>
+            </div>
+
+            <div class="space-y-4 border-t border-stone-100 pt-4">
+                <form onsubmit="event.preventDefault(); alert('Reserva registrada con éxito.'); closeBookingModal();" class="space-y-4">
+                    <!-- Fila 1: Nombre y Apellidos -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 mb-1">Nombre</label>
+                            <input type="text" required placeholder="Tu nombre" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 mb-1">Apellidos</label>
+                            <input type="text" required placeholder="Tus apellidos" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Fila 2: Email y Móvil -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 mb-1">Correo electrónico</label>
+                            <input type="email" required placeholder="tu@email.com" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 mb-1">Teléfono móvil</label>
+                            <input type="tel" required placeholder="600 00 00 00" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Sección dinámica para eventos gratuitos (Aportación) o de pago -->
+                    <div id="contributionSection" class="pt-2">
+                        <label class="block text-xs font-semibold text-stone-700 mb-2">Aportación voluntaria para la práctica (Opcional)</label>
+                        <div class="grid grid-cols-4 gap-2 mb-3">
+                            <button type="button" onclick="selectContribution(this, 0)" class="contrib-btn px-3 py-2 border border-brand-500 bg-brand-50 text-brand-800 rounded-xl text-xs font-bold transition-all">Gratis</button>
+                            <button type="button" onclick="selectContribution(this, 5)" class="contrib-btn px-3 py-2 border border-stone-200 hover:border-brand-500 rounded-xl text-xs font-semibold transition-all">5 €</button>
+                            <button type="button" onclick="selectContribution(this, 10)" class="contrib-btn px-3 py-2 border border-stone-200 hover:border-brand-500 rounded-xl text-xs font-semibold transition-all">10 €</button>
+                            <button type="button" onclick="selectContribution(this, 15)" class="contrib-btn px-3 py-2 border border-stone-200 hover:border-brand-500 rounded-xl text-xs font-semibold transition-all">15 €</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBookingBtn" class="w-full py-3.5 bg-brand-navy hover:bg-stone-800 text-white rounded-xl font-semibold text-sm transition-all shadow-md">
+                        Confirmar Reserva
+                    </button>
+
+                    <!-- Mensaje fino de Stripe abajo -->
+                    <div class="flex items-center justify-center gap-1.5 pt-2 text-[11px] text-stone-400 font-light tracking-wide">
+                        <i data-lucide="lock" class="w-3 h-3 text-stone-400"></i>
+                        <span>Pagos y reservas procesados de forma segura con <strong class="font-semibold text-stone-500">Stripe</strong></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
